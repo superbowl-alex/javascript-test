@@ -5,22 +5,43 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./styles.css" />
-    <title>Weather in your city</title>
+    <title>Button test</title>
   </head>
   <body>
-    <div class="form-wrap">
-      <form class="search-form" id="search-form">
-        <input
-          class="search-form__input"
-          type="text"
-          name="query"
-          autocomplete="off"
-          placeholder="Movie search..."
-        />
-        <button class="search-form__btn" type="submit"></button>
-      </form>
-    </div>
+    <main class="main">
+      <div class="buttonWrap">
+        <button class="buttonWrap__item js-header-cart-button" type="button">
+          Button 1
+        </button>
+        <button
+          class="buttonWrap__item js-header-localization-btn"
+          type="button"
+        >
+          Button 2
+        </button>
+      </div>
+    </main>
+    <div class="modalWrap">
+      <div class="modalWrap__item header-cart">
+        <button
+          class="modal-close-button header-cart__close-button"
+          type="button"
+        >
+          x
+        </button>
+        <p class="header-cart__content">Modal 1</p>
+      </div>
 
-    <script src="./js/test-script.js" type="module"></script>
+      <div class="modalWrap__item header__localization-popup">
+        <button
+          class="modal-close-button header-localization-popup__close-button"
+          type="button"
+        >
+          x
+        </button>
+        <p class="header-localization-popup__content">Modal 2</p>
+      </div>
+    </div>
+    <script src="./js/openModal.js" type="module"></script>
   </body>
 </html>
