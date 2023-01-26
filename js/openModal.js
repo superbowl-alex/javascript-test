@@ -8,6 +8,10 @@
       button: "js-header-localization-btn",
       modal: "header__localization-popup",
     },
+    {
+      button: "btn3",
+      modal: "modal3",
+    },
   ];
 
   const normalizedString = (str) => {
@@ -52,6 +56,11 @@
     ref.addEventListener("click", openModal);
   }
   const closeModalBtn = document.querySelectorAll(".modal-close-button");
-  closeModalBtn.forEach((item) => item.addEventListener("click", closeModal));
+  closeModalBtn.forEach((item) =>
+    item.addEventListener("click", () => {
+      currentButton = null;
+      closeModal();
+    })
+  );
   window.addEventListener("keydown", closeModalByEsc);
 })();
